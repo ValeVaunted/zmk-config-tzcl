@@ -22,6 +22,18 @@
 #define NUMBER_L 2
 
 / {
+	behaviors {
+		rpi: require_prior_idle {
+    		compatible = "zmk,behavior-hold-tap";
+    		label = "REQUIRE_PRIOR_IDLE";
+    		#binding-cells = <2>;
+    		flavor = "tap-preferred";
+    		tapping-term-ms = <300>;
+    		quick-tap-ms = <200>;
+    		require-prior-idle-ms = <250>;
+   		bindings = <&kp>, <&kp>;
+		};
+    	};
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -30,7 +42,7 @@
                 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                       ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                      &kp Q         &kp W         &kp F         &kp P         &kp B                                                 &kp J         &kp L         &kp U         &kp Y         &kp SEMI                
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                       ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                     &kp  A        &mt LCTRL R   &mt LALT S    &mt LGUI T    &kp G                                                 &kp M        &mt LGUI N    &mt LALT E    &mt LCTRL I   &kp O                
+                     &kp  A        &rpi LCTRL R   &rpi LALT S    &rpi LGUI T    &kp G                                                 &kp M        &rpi LGUI N    &rpi LALT E    &rpi LCTRL I   &kp O                
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                       ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                      &kp Z         &kp X         &kp C         &kp D         &kp V                                                 &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH                
                 // ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤─────────────╮           ╭─────────────├─────────────┼─────────────┼─────────────┴───────────────────────────╯
