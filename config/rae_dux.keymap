@@ -24,26 +24,13 @@
 
 #define ___ &trans
 
-#define BASE_L  0
-#define SYM   1
-#define NUM   2
-#define NAV   3
-#define LANG_L  4
+#define ALPHA_L 0
+#define SPECIAL_L 1
+#define NUMBER_L 2
 
 #define KEYS_LEFT 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24  // left hand
 #define KEYS_RIGHT 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29  // right hand
 #define THUMBS 30 31 32 33 34 35                        // thumbs
-
-#define DO_CUT   LC(X)
-#define DO_COPY  LC(C)
-#define DO_PASTE LC(V)
-
-ZMK_UNICODE_SINGLE(sym_lozenge, N2, N5, C, A)
-ZMK_UNICODE_SINGLE(sym_estimates, N2, N2, N5, N9)
-ZMK_UNICODE_SINGLE(sym_unequal, N2, N2, N6, N0)
-ZMK_UNICODE_SINGLE(sym_almost, N2, N2, N4, N8)
-ZMK_UNICODE_SINGLE(en_dash, N2, N0, N1, N3)
-ZMK_UNICODE_SINGLE(em_dash, N2, N0, N1, N4)
 
 / {
 	keymap {
@@ -58,7 +45,7 @@ ZMK_UNICODE_SINGLE(em_dash, N2, N0, N1, N4)
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                       ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                      &kp Z         &kp X         &kp C         &kp D         &kp V                                                 &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH                
                 // ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤─────────────╮           ╭─────────────├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-			 /*&            &*/                             &kp SPACE     &kp BSPC      &kp ENTER                     ___       &kp LSHFT     &mo 1  /*&             &*/
+			 /*&            &*/                             &kp SPACE     &kp BSPC      &kp ENTER                     ___       &kp LSHFT     &mo SPECIAL_L  /*&             &*/
                 //                                           ╰─────────────┴─────────────┴─────────────╯           ╰─────────────┴─────────────┴─────────────╯
 			>;
 		};
@@ -72,7 +59,7 @@ ZMK_UNICODE_SINGLE(em_dash, N2, N0, N1, N4)
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                       ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                      &kp TILDE2    &kp GT        &kp PLUS      &kp UNDER     &kp DQT                                               &kp QUESTION  &kp LBRC      &kp RBRC      &kp PIPE2     &de_ae
                 // ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤─────────────╮           ╭─────────────├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-			 /*&            &*/                             &mo 0         &kp ESC      &kp ENTER                      ___      &kp TAB        &kp A  /*&             &*/
+			 /*&            &*/                             &mo ALPHA_L   &kp ESC       &kp ENTER                      ___      &kp TAB       &kp A  /*&             &*/
                 //                                           ╰─────────────┴─────────────┴─────────────╯           ╰─────────────┴─────────────┴─────────────╯
 			>;
 		};
