@@ -15,7 +15,7 @@
 
 
 
-#define ___ &trans
+#define ___ &none
 
 #define ALPHA_L 0
 #define SPECIAL_L 1
