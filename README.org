@@ -62,3 +62,8 @@ Number layer - 3:
 - Inspired by Pnohty's numpad+, I reversed the order of the numbers so the lowest digits are in the most comfortable positions (following Benford's law)
 - Media/Brightness controls
 - Arrow keys for navigation in combination with modifier keys
+
+For mac I have magnet setup for window management with these settings:
+[[https://i.imgur.com/O96gvb3.png]]
+[[https://i.imgur.com/CVPVxH5.png]]
+[[https://i.imgur.com/dIkRyOE.png]]
