@@ -41,7 +41,7 @@
           ╰───────╮ 30  31  32 │ │ 33  34  35 ╭───────╯
                   ╰────────────╯ ╰────────────╯        */
 
-        #define COMBO_TIME 20
+        #define COMBO_TIME 200
 
 		COMBO(escape, &kp ESC, 31 34, COMBO_TIME)
     };
