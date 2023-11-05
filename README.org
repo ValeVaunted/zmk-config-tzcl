@@ -12,7 +12,7 @@ The philosophy of the layout revolves around toggeling between layers to make up
 Legend:
 - X(Y) -> X when pressed | Y when held
 - TO(X) -> toggle to layer X
-- ⊞/MEH -> ⌃ + ⌥ + ⌘
+- ⊞/MEH -> ⌃ + ⌥ + ⇧
 - ␣ -> Space
 - ⎋ -> Escape
 - ⏎ -> Enter
